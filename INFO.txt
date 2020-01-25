@@ -1,0 +1,14 @@
+Restaurant Responsive Landing Page perfectly organized and designed with latest design trends. Created in Sketch, Figma and Adobe XD.
+
+- Desktop and Mobile version
+- Free Google fonts
+- Easy Customize with Styles
+- Sketch, Figma and Adobe XD version
+- Bootstrap Grid
+
+Fonts
+https://fonts.google.com/specimen/PT+Serif
+https://fonts.google.com/specimen/Roboto
+
+Images
+https://unsplash.com
