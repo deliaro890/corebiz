@@ -722,6 +722,48 @@
 
 
 /*fin de la octava section*/
+/*novena seccion!!!*/
+.chef{
+    background-color: #f9f7f2;
+    height: 880px;
+    display: grid;
+    padding: 15px;
+    box-sizing: border-box;
+    top: -500px;
+    position: relative;
+}
+
+.chef__gorrito{
+    position: absolute; /*su padre tiene por defaul position static y su abuelo posiction:absolute, por ello este agarra su abosuluto respecto al inmediato sup que no tenga el default position relative*/
+    width:85px;
+    height:85px;
+    background-image:url('../img/chef_gorrito.png'), url('../img/circle_cubiertos_historia.png');
+    background-color: #bba285;
+    background-size: 17px 24px, 56px 56px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    top:235px;/*agarrara de referencia el inmediato sup con position relative*/
+    box-shadow: 0 10px 20px 0 rgba(97, 52, 0, 0.3);
+    left: 9px; /*al padre le puse position relative, por eso le puse 0 para que en ipad no se separen jeje*/
+    z-index: 2;
+}
+.chef__img{
+    display: grid;
+}
+.chef__chef{
+    align-self: center;
+    justify-self: center;
+}
+.chef__letters{
+    display: grid;
+}
+.chef__auth{
+    align-self: end;
+}
+.chef__posi{
+    justify-self: left;
+}
+/*fin de la novena seccion!!!*/
 @media (min-width: 768px){
 
     .home{
