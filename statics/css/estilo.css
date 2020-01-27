@@ -1,5 +1,9 @@
+
 * {
     margin: 0px;
+}
+.textos300{
+    font-weight: 300;
 }
 .home{
     
@@ -19,9 +23,12 @@
 }
 
 .navegador{
-        display: grid;
-        grid-template-columns: 50% 50%;
-       width: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 100%;
+}
+.redes{
+    display:none;
 }
 .navegador__icon{
     width: 48px;
@@ -36,12 +43,12 @@
     display: none;
     margin: 0px;
     padding: 0px;
-    padding-right: 30px;
+    
 }
 .navegador__menu li{
 
     font-family: 'Roboto', sans-serif;
-    font-size: 26px;
+    font-size: 20px;
     list-style: none;
     text-align: right;
     color: white;
@@ -93,6 +100,7 @@
     letter-spacing: normal;
     text-align: left;
     
+    
 }
 .home__btn{
 
@@ -121,3 +129,1166 @@
 .platillo{
     width: 320px;
 }
+.flechita{
+    display: none;
+}
+
+
+
+/* Aqui va la segunda seccion*/
+.history{
+    display: grid;
+    padding: 15px;
+    height: 832px;
+    box-sizing: border-box;
+    justify-self: center;
+    background-color: #f9f7f2;
+    position: relative;
+    grid-template-rows: 420px 1fr;
+   
+}
+.history__cubiertos{
+    position: absolute; /*su padre tiene por defaul position static y su abuelo posiction:absolute, por ello este agarra su abosuluto respecto al inmediato sup que no tenga el default position relative*/
+    width:85px;
+    height:85px;
+    background-image:url('../img/cubiertos_historia.png'), url('../img/circle_cubiertos_historia.png');
+    background-color: #bba285;
+    background-size: 17px 24px, 56px 56px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    top:235px;/*agarrara de referencia el inmediato sup con position relative*/
+    box-shadow: 0 10px 20px 0 rgba(97, 52, 0, 0.3);
+    left:0px; /*al padre le puse position relative, por eso le puse 0 para que en ipad no se separen jeje*/
+    z-index: 2;
+}
+.history__images{
+    display: grid;
+    width: 330px;
+    justify-self: center;
+    position: relative;
+}
+
+.history__puntitos{
+    position: absolute;
+    width: 176px;
+    height: 176px;
+    background-image: url('../img/puntos_historia.png');
+    right: -12px;
+    top: 105px;
+    z-index: 0;
+}
+.history__local{
+    justify-self: center;
+    /*align-self: center;/* /*vertical cuando es hijo de un grid*/
+    z-index: 1;
+    position: relative;
+    top:65px; /*necesita un pocition dif a static para poderlo mover, si es relative, el top se referencia a si mismo*/
+}
+.history__letters{
+    display: grid;
+    grid-template-rows: 47px 52px 180px 70px;
+    width: 330px;
+    justify-self: center;
+}
+.sectionSubtitle{
+    font-family: Roboto;
+    font-size: 24px;
+    font-weight: 300;
+    color:#333333;
+    line-height: 1.33;
+    
+}
+
+.sectionTitle{
+    font-family:'PT Serif', serif;
+    font-size: 40px;
+    font-weight: bold;
+    color:#333333;
+    line-height: 1.2;
+   
+
+}
+
+.sectionDescription{
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    color:#333333;
+   
+
+}
+
+/* Fin de la segunda seccion*/
+/*Tercera seccion!*/
+.seacional_lunch{
+    
+    padding: 0px;
+    margin:0px;
+    height: 2500px;
+    background-color:#f9f7f2;
+    position: relative; /*chacar si sirve*/
+    
+    
+    
+   
+}
+
+.seasonal{
+    display: grid;
+    position:relative;
+    background-color:white;
+    height: 1120px;
+    padding: 15px;
+    box-sizing: border-box;
+    justify-self: center;
+    grid-template-rows: 190px 1fr 1fr;
+    grid-row-gap: 0px;
+    box-shadow: 0 10px 20px 0 rgba(97, 52, 0, 0.3);
+    
+    
+ 
+
+}
+.seasonal__head{
+    justify-self: left;
+    width: 330px;
+    z-index: 1;
+    position: relative;
+    justify-self: center;
+    padding-left: 0px;
+    
+    
+}
+
+
+.seasonal_puntitos{
+    width: 176px;
+    height: 176px;
+    background-image: url('../img/puntos_historia.png');
+    position: absolute;
+    top: 16px;
+    right: 0px;
+    justify-self: center;
+    z-index: 0;    
+}
+
+.co{
+    margin-bottom: 4px;
+    position: absolute;
+    top:60px;
+    
+}
+.so{
+    position: absolute;
+    top:91px;
+    z-index: 2;
+}
+.seasonal__menu{
+    max-width: 400px;
+    display: grid;
+    justify-self: center;
+}
+.seasonal__menu--item{
+    display: grid;
+    grid-template-columns: 80% 20%;
+    padding: 15px 0px;
+  
+    grid-template-rows: 29px 19px 30px;
+}
+.plato__title{
+    grid-column: 1;
+    grid-row:1;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.6;
+    color:#333333;
+}
+
+.plato_description{
+    grid-column: 1/3;
+    grid-row:2;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: rgba(51, 51, 51, 0.5);
+    
+}
+.price{
+    grid-column: 2;
+    grid-row:1;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    color: rgba(51, 51, 51, 0.5);
+    text-align: right;
+}
+.linea{
+    grid-column:1/3;
+    grid-row:3;
+    height: 0.3px;
+    background-color: #eaeaea;
+    align-self: self-end;
+}
+.seasonal__image{
+    justify-self: center;
+    align-self: center;
+    width: 332px;
+    height: 326px;
+    position: relative;
+    top:30px;
+}
+
+
+/*Fin de la tercera seccion!*/
+
+/*cuarta seccion*/
+.lunch{
+    display: grid;
+    padding:15px;
+    height: 1200px;
+    box-sizing: border-box;
+    justify-self: center;
+    position: relative;
+    grid-template-rows: 160px 1fr 60px;
+    grid-row-gap: 30px;
+}
+.lunch__head{
+    align-self: end;
+    justify-self: center;
+}
+.tasty{
+    text-align: center;
+}
+
+.lunch__menuD{
+    display: none;
+}
+
+.lunch__menu--item{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns:112px 1fr 60px;
+    grid-column-gap: 5%;
+
+}
+.lunch__menu__item--platito{
+    grid-row:1/3;
+    grid-column:1;
+    width: 112px;
+    height: 112px;
+}
+.lunch__menu__item--title{
+    grid-column: 2;
+    grid-row: 1;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color:#333333;
+    align-self: end;
+}
+.lunch__menu__item--description{
+    grid-column: 2/4;
+    grid-row: 2;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: rgba(51, 51, 51, 0.5);
+    align-self: center;
+
+}
+.lunch__menu__item--price{
+    grid-column: 3;
+    grid-row: 1;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    color: rgba(51, 51, 51, 0.5);
+    text-align: right;
+    align-self: end;
+}
+.lunch__menu__item--linea{
+    grid-row:3;
+    align-self: center;
+    grid-column:1/4
+
+}
+.btn_lunch{
+    left: 25%;
+    position: relative;
+}
+/*fin de la cuarta seccion*/
+/*quinta seccion!!*/
+.upcoming{
+    display: grid;
+    padding: 15px;
+    height: 1008px;
+    box-sizing: border-box;
+    justify-self: center;
+    background-color: #333333;
+    position: relative;
+    grid-template-rows: 150px 1fr 1fr;
+  
+
+}
+.upcoming__head{
+   
+    display: grid; /*para que sus hijos agarren el justify-self*/
+    
+}
+.upcoming__head--p{
+    color: white;
+    justify-self: center;
+    align-self: end;
+    font-weight: 300;
+    line-height: 1.33;
+    font-family: 'Roboto', sans-serif;
+}
+.upcoming__head--h2{
+    color: white;
+    justify-self: center;
+    font-size: 36px;
+    
+}
+/* .upcoming__coffe{
+    height: 736px;
+    max-width: 330px;
+    position: relative;
+    justify-self: center;
+    z-index: 1;
+   
+   
+} */
+
+.upcoming__coffeCard{
+    background-color: white;
+    display: grid;
+    height: 736px;
+    grid-template-rows: 291px 1fr;
+   
+    max-width: 330px;
+    position: relative;
+    justify-self: center;
+    z-index: 1;
+    
+   
+}
+.upcoming__coffe--img{
+    width: 330px;
+    height: 291px;
+}
+.upcoming__coffeCardLetters{
+   
+    padding-left: 30px;
+    top:40px;
+    position: relative;
+
+}
+
+.upcoming__coffeCard--desc{
+
+    width: 286px;
+    height: 160px;
+    align-self:center;
+    position: relative;
+    
+    margin-top: 30px;
+   
+
+}
+.upcoming__coffeCardLetters--sub{
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+.upcoming__coffeCard--date{
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: rgba(51, 51, 51, 0.5);
+
+}
+.upcoming__puntitos{
+    position: absolute;
+    width: 176px;
+    height: 176px;
+    background-image: url('../img/puntos_historia.png');
+    right: 63px;
+    bottom: 40px;
+    z-index: 0;
+
+}
+/*fin de la quinta seccion*/
+/*sexta seccion!!*/
+.gallery{
+    background-color: #f9f7f2;
+    display: grid;
+    height: 2151px;
+    position: relative;
+    
+    
+    grid-template-rows: 192px 1519px 440px;
+   
+}
+.gallery__head{
+    position: relative;
+    justify-self: center;
+    top: 71px;
+}
+.gallery__head--p{
+    position:relative;
+    text-align: center;
+}
+.gallery__photos{
+    position: relative;
+    display: grid;  
+}
+.gallery__photos--item{
+    position: relative;
+    align-self: center;
+    justify-self: center;
+
+}
+.aboutOne{
+    position: relative;
+    background-color: #f9f7f2;
+    align-self: center;
+    align-content: center;
+    display: grid;
+    
+}
+.aboutOne--p{
+    align-self: center;
+    justify-self: center;
+    
+
+}
+
+.aboutOne--h2{
+    align-self: center;
+    justify-self: center;
+
+}
+
+/*fin sexta seccion*/
+/*septima seccion!!*/
+.about{
+    display: grid;
+    height: 737px;
+    padding: 15px;
+    box-sizing: border-box;
+    justify-self: center;
+    position: relative;
+    top: -100px;
+    z-index: 3;
+    background-color: white;
+    margin: 15px;
+}
+.about__head{
+    display: grid;
+}
+.about__head--puntitos{
+
+    position: absolute;
+    width: 176px;
+    height: 176px;
+    background-image: url('../img/puntos_historia.png');
+    z-index: 0;
+    right: 15px;
+    top:15px;
+
+}
+.about__head--man{
+    align-self: center;
+    justify-self: center;
+    z-index: 1;
+}
+.about__desc{
+    width: 286px;
+    height: 285px;
+    margin: 0px;
+    align-self: center;
+    display: grid;
+    justify-self: center;
+    grid-template-rows: 1fr 70px;
+    
+}
+.about__desc--p{
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 300;
+    color:rgba(51, 51, 51,0.7);
+    
+    text-align: center;
+    
+
+}
+.about__footer{
+    display: grid;
+    justify-self: top;
+    align-self: center;
+    grid-row-gap: 10px;
+}
+.about__footer-author{
+    font-family:'PT Serif', serif;
+    font-size: 24px;
+    font-weight: bold;
+    color:#333333;
+    line-height: 1.2;
+    align-self: center;
+    justify-self: center;  
+}
+.about__footer--posi{
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 300;
+    color: rgba(51, 51, 51, 0.5);
+    align-self: center;
+    justify-self: center;  
+
+}
+.about__footer--stars{
+    justify-self: center;
+    align-self: end;
+}
+
+
+/*fin de la septima seccion*/
+/*octava section!!*/
+.press{
+    height: 1236px;
+    background-color: #333333;
+    position: relative;
+    top:-500px;
+    z-index: 2;
+    top: -500px;
+    z-index: 2;
+}
+.press__head--p{
+    color: white;
+    top: 500px;
+    position: relative;
+    text-align: center;
+}
+.press__head--h2{
+    color: white;
+    top: 520px;
+    position: relative;
+    text-align: center;
+}
+.press__card{
+    top: 570px;
+    height: 464px;
+    background-color: white;
+    position: relative;
+    margin: 15px;
+    z-index: 1;
+    display: grid;
+    padding-left: 30px;
+    justify-items: left;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+.press_puntitos{
+    position: absolute;
+    width: 176px;
+    height: 176px;
+    background-image: url('../img/puntos_historia.png');
+    z-index: 0;
+    bottom: 45px;
+    right: 1px;
+
+}
+
+.press__card--desc{
+    text-align: left;
+    width: 274px;
+    height: 224px;
+}
+.press__card--nyt{
+    align-self: center;
+}
+.press__card--tnyt{
+    font-family: PTSerif;
+    font-size: 24px;
+    font-weight: bold;
+    color:#333333;
+
+}
+.press__card2{
+    display: none;
+}
+.press__card3{
+    display: none;
+}
+
+
+/*fin de la octava section*/
+@media (min-width: 768px){
+
+    .home{
+        background-position: center center;
+        background-size: cover;
+        
+    }
+    .lunch__menu{
+        width: 400px;
+        justify-self: center;
+    } 
+
+}
+
+@media (min-width: 1024px){
+
+    .home{
+        padding: 23px 60px;
+        grid-template-columns: minmax(300px, 585px) minmax(300px, 585px) ;
+        grid-template-rows: 248px 275px 58px 106px;
+        justify-content: center;
+       
+        
+        
+    }
+
+    .navegador__icon{
+        display:none;
+        
+    }
+    
+    .navegador__menu{
+        display: flex;
+        width: 502px;
+        font-size: 20px;
+        font-weight: 300;
+        justify-content: space-between;
+       
+        
+    }
+    .navegador__menu li{
+        color:rgba(255, 255, 255,0.6);
+    
+    }
+    .redes{
+        display: flex;
+        justify-self: right;
+    }
+    .redes__icon{
+        border-radius: 50%;
+        border:1px solid white;
+        height: 48px;
+        width: 48px;
+        margin-right: 7px;
+    }
+    .redes__icon--fb{
+        background-image: url(../img/facebook.png);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .redes__icon--tw{
+        background-image: url(../img/twitter.png);
+        background-repeat: no-repeat;
+        background-position: center;
+
+    }
+    .redes__icon--insta{
+        background-image: url(../img/instagram.png);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .navegador{
+        grid-column: 1/3;
+        grid-template-columns: 1fr 1fr 1fr;
+        
+    }
+    .home__header{
+        top: 0px;
+    }
+    .puntos{
+        justify-self: left;
+    }
+    .home__horario{
+        grid-column: 1;
+        justify-self: left;
+        align-self: start;
+        
+    }
+    .home__btn{
+        grid-column: 1;
+        justify-self: left;
+    }
+    .platillo{
+        grid-row: 2/5;
+        grid-column: 2;
+        width: 455px;
+        align-self: center;
+        
+    }
+    .home__title{
+        width: auto;
+        max-width: 543px;
+        font-size: 72px;
+    }
+    .home__puntitos{
+        top: -40px;
+       
+    }
+
+    .flechita{
+        display: block;
+        position: absolute;
+        top: 800px;
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        border: 1px solid white;
+        background-image: url('../img/flechita.png');
+        left: 49%;
+        background-repeat: no-repeat;
+        background-position: center;
+
+    }
+
+/* Aqui va la segunda seccion 1024*/
+.history{
+    grid-template-columns: 1fr 1fr;
+    height: 880px;
+    grid-template-rows: 1fr;
+    align-items: center;
+    grid-template-columns: minmax(300px, 585px) minmax(300px, 585px);
+    justify-content: center;
+   
+}
+.history__images{
+    width: 100%;
+    height: 100%;
+    max-width: 500px;
+
+    
+}
+.history__local{
+    width: 463px;
+    height: 454px;
+    top:0px;
+    align-self: center;
+}
+.history__puntitos{
+    top:260px;
+    
+}
+.history__cubiertos{
+    top:496px;
+    width: 130px;
+    height: 130px;
+    background-size: 27px 34px, 70px 70px;
+    left: -16px;
+}
+.history__letters{
+    width: 470px;
+    grid-template-rows: 47px 85px 180px 70px;
+}
+
+/*trecera seccion 1024*/
+.seasonal{
+    position:relative;
+    justify-self: left;
+    width: 97%;
+    left:3%;
+    
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 300px 400px;
+    height: 880px;
+    grid-row-gap: 8px;
+    align-items: center;
+    grid-template-columns: minmax(300px, 585px) minmax(300px, 585px);
+    justify-content: center;
+}
+.seasonal__head{
+    grid-column: 1;
+    grid-row: 1;
+    width: auto;
+}
+.seasonal__menu{
+    grid-column: 1;
+    grid-row: 2;
+}
+.seasonal__image{
+    grid-column: 2;
+    grid-row: 1/3;
+    width: 463px;
+    height: 454px;
+}
+.co{
+    margin-bottom: 0px;
+    position: relative;
+    top:0px;
+    
+}
+.so{
+    position: relative;
+    top:0px;
+    font-size: 56px;
+}
+.seasonal_puntitos{
+   
+    right: -12px;
+}
+
+.seasonal__menu--item{
+    grid-template-rows: 29px 19px 25px;
+    width: 400px;
+
+}
+/*fin tercera seccion 1024*/
+
+/*cuarta seccion 1024*/
+.seacional_lunch{
+    height: 1800px;
+}
+.lunch{
+    display: grid;
+    height: 880px;
+    grid-template-rows: 191px 1fr 100px;
+    grid-template-columns: 100%;
+    grid-row-gap: 50px;
+}
+
+.lunch__head{
+    grid-row:1;
+}
+.lunch__menu{
+    display: none;
+}
+
+.lunch__menuD{
+    grid-row:2;
+    width: auto;
+    display: grid;
+    grid-template-columns: minmax(300px, 585px) 1px minmax(300px, 585px) ;
+    grid-template-rows:1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.lunch__menu--item{
+    
+    grid-template-columns:112px 240px 90px;
+   
+
+}
+.lunch__menu__item--price{
+    justify-self: left;
+}
+
+.lunch__menu1{
+    grid-column:1;
+
+}
+.lineaV{
+    grid-column: 2;
+    border-left: 1px solid rgba(51, 51, 51, 0.5);
+    height: 500px;
+}
+.lunch__menu2{
+    grid-column:3;
+
+}
+
+.Uno{
+    width: 120%;
+}
+
+
+
+.btn_lunch{
+    grid-row:3;
+    left: 44%;
+}
+
+
+/*fin de cuarta seccion 1024*/
+/*quinta seccion 1024*/
+.upcoming{
+    height: 880px;
+    grid-template-rows: 256px 1fr 1fr;
+}
+.upcoming__coffeCard{
+   
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    max-width: 1170px;
+    height: 398px;
+}
+.upcoming__coffe--img{
+    grid-column: 1;
+    grid-row:1;
+    width: 473px;
+    height:398px;
+}
+.upcoming__coffeCardLetters{
+    grid-column: 2;
+    grid-row:1;
+}
+
+.upcoming__coffeCard--desc{
+    width: 380px;
+    height: 96px;
+}
+.sectionTitle1024{
+    
+    font-size: 56px;
+}
+/*fin quinta seccion 1024*/
+/*sexta seccion 1024*/
+.gallery{
+    height: 1375px;
+    grid-template-rows:260px 1fr 440px;
+    
+}
+.gallery__head{
+   
+    justify-self: center;
+    top: 0px;
+    align-self: end;
+}
+.gallery__photos{
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-self: center;
+    justify-self: center;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    top:-60px;
+}
+
+.gallery__photos--item{
+    width: 262px;
+    height: 181px;
+}
+
+/*fin de la sexta seccion 1024*/
+.aboutOne{
+    top:-80px
+}
+/*septima seccion 1024*/
+.about{
+    height: 545px;
+    top: -130px;
+}
+.about__head--puntitos{
+    right: 349px;
+    top: 38px;
+}
+.about__desc{
+    width: 770px;
+    height: 102px;
+    position: relative;
+}
+.about__head--man{
+    align-self: end;
+}
+.flechitabout{
+    display: block;
+    position: absolute;
+    top: 800px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1px solid #333333;
+    background-image: url('../img/flechita.png');
+    left: 49%;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+/*fin de la septima seccion*/
+/*octava seccion 1024*/
+.press__cardss{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    top:570px;
+    position: relative;
+
+}
+.press__card{
+      top: 0px;
+      grid-column: 1;
+      width: 262px;
+      height: 464px;
+      background-color: white;
+      position: relative;
+      margin: 15px;
+      z-index: 1;
+      display: grid;
+      padding-left: 30px;
+      justify-items: left;
+      grid-template-rows: 1fr 1fr 1fr;
+  }
+
+.press__card--desc{
+    width: 250px; 
+}
+  .press__card--nyt{
+    width: 250px;
+}
+.press__card2{
+    grid-column: 2;
+    width: 262px;
+    height: 464px;
+    background-color: white;
+    position: relative;
+    margin: 15px;
+    z-index: 1;
+    display: grid;
+    padding-left: 30px;
+    justify-items: left;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+.press__card3{
+    grid-column: 3;
+    width: 262px;
+    height: 464px;
+    background-color: white;
+    position: relative;
+    margin: 15px;
+    z-index: 1;
+    display: grid;
+    padding-left: 30px;
+    justify-items: left;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+/*fin octava seccion*/
+
+
+
+
+}
+
+@media (min-width: 1200px){
+    .home{
+        padding:23px 180px;
+        grid-template-rows: 248px 215px 58px 106px;
+    }
+    .platillo{
+        width: 555px;
+        
+    }
+    .history{
+        grid-column-gap: 80px;
+    }
+    
+    
+    .history__cubiertos{
+        width: 170px;
+        height: 170px;
+        background-size: 33px 48px, 112px 112px;
+        left: -36px;
+        
+    }
+    .history__puntitos{
+        right: -115px;
+        top:210px;
+    }
+    .history__letters {
+       
+        grid-template-rows: 47px 85px 130px 70px;
+    }
+
+    /*tercera seccion 1200*/
+    .seasonal{
+        grid-template-columns: 50% 50%;
+
+    }
+    .seasonal__head{
+        width: 70%;
+    }
+    .co{
+        top:60px;
+    }
+    .so{
+        top:69px;
+    }
+    .seasonal__menu{
+        width: 460px!important;
+    }
+    .seasonal__image{
+        grid-column: 2;
+        grid-row: 1/3;
+        width: 570px;
+        height: 560px;
+    }
+      /*fin tercera seccion 1200*/
+    
+    /*quinta seccion 1200*/
+    .upcoming__coffeCard{  
+        width: 1170px;
+        height: 480px;
+    }
+    .upcoming__coffe--img{
+        width: 570px;
+        height:480px;
+    }
+    .upcoming__coffeCardLetters{
+        padding: 75px 0px 96px 66px;
+        top: 0px;     
+    }
+   
+    .upcoming__puntitos{
+        right: 90px;
+        bottom: 80px;
+    }
+    /*fin quinta seccion 1200*/
+    /*sexta seccion 1200*/
+
+    .gallery__photos--item{
+        width: 370px;
+        height: 256px;
+    }
+    .gallery__photos{
+        top:0px;
+    }
+    /*fin de la sexta seccion 1200*/
+    /*section siete 1200*/
+    .about__head--puntitos{
+        right:548px;
+     
+    }
+    /*fin section siete 1200*/
+    /*octava seccion 1200*/
+.press{
+    padding: 0px 80px 0px 80px;
+    height: 1336px;
+}
+.press_puntitos{
+    bottom: 141px;
+    right: 423px;
+}
+.press__card{
+      width: 340px;
+      padding-left: 60px;
+  }
+.press__card2{
+    width: 340px;
+    padding-left: 60px;
+}
+.press__card3{
+    width: 340px;
+    padding-left: 60px;
+}
+.press__card--desc{
+    width: 274px; 
+    height: 224px;
+}
+  .press__card--nyt{
+    width: 281px;
+}
+
+/*fin octava seccion*/
+    
+
+}
+
+  
+
+
+
+
